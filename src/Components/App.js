@@ -6,10 +6,14 @@ import BellyRing from "./BellyRing.jsx";
 import ProductDisplay from './ProductDisplay.jsx'
 import BellyJewelryContext from "../context/BellyJeweryContext.jsx";
 import HomePage from "../pages/HomePage.jsx";
+import Login from "../pages/LoginPage.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginPage from "./LoginPage.jsx";
 function App() {
 
+  const [searchBarVisibility, setSearchBarVisibility] = useState(false)
+  const [isLoggedIn, setIsloggedIn] = useState({status:false,user:{}})
   const [jewelry,setJewelry] = useState([
     {
       id:1,
@@ -35,7 +39,7 @@ function App() {
 
 ])
   return (
-  <BellyJewelryContext.Provider value={{jewelry,setJewelry}}>
+  <BellyJewelryContext.Provider value={{jewelry,setJewelry,searchBarVisibility, setSearchBarVisibility,isLoggedIn, setIsloggedIn}}>
     <BrowserRouter>
       <Routes>
           <Route path="/"  element={
@@ -45,6 +49,8 @@ function App() {
           
 
           <Route path="/Jewelry"  element={ <Navbar/>}/>
+
+          <Route path="/auth" element={<Login/>}/>
              
   
         

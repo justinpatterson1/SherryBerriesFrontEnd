@@ -10,7 +10,8 @@ function Hero() {
         backgroundSize:`cover`,
         backgroundRepeat:`no-repeat`,
         backgroundAttachment:`fixed`,
-        height:'88vh'
+        height:'100vh',
+        marginTop:''
     }
 
   return (
