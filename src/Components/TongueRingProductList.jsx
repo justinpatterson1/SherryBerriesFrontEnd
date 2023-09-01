@@ -2,10 +2,10 @@ import React from 'react'
 
 function TongueRingProductList({name,img, price}) {
  
-    const image = require(`../assets/img/${img}`)
+    //const image = require(`../assets/img/${img}`)
   return (
     <div className='grid grid-cols-1 justify-center '>
-        <img src={image} alt="" srcset="" className='h-72 w-48 border-black border-solid border-2 mb-5 hover:shadow-2xl '/>
+        <img src={img} alt="" srcset="" className='h-72 w-48 border-black border-solid border-2 mb-5 hover:shadow-2xl '/>
         <div className='text-center'>
             <h3 className=''>{name}</h3>
             <span>{price}</span>
